@@ -1,8 +1,8 @@
-# my-bluefin-os &nbsp; [![bluebuild build badge](https://github.com/gabrielfnakata/my-bluefin-os/actions/workflows/build.yml/badge.svg)](https://github.com/gabrielfnakata/my-bluefin-os/actions/workflows/build.yml)
+# bluefin-dx-niri-dms &nbsp; [![bluebuild build badge](https://github.com/gabrielfnakata/bluefin-dx-niri-dms/actions/workflows/build.yml/badge.svg)](https://github.com/gabrielfnakata/bluefin-dx-niri-dms/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+This image has added Niri and Dank Material Shell out of box.
 
-After setup, it is recommended you update this README to describe your custom image.
+- See [BlueBuild docs](https://blue-build.org/how-to/setup/)
 
 ## Installation
 
@@ -13,7 +13,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/gabrielfnakata/my-bluefin-os:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/gabrielfnakata/bluefin-dx-niri-dms:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +21,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/gabrielfnakata/my-bluefin-os:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/gabrielfnakata/bluefin-dx-niri-dms:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -39,5 +39,5 @@ If build on Fedora Atomic, you can generate an offline ISO with the instructions
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/gabrielfnakata/my-bluefin-os
+cosign verify --key cosign.pub ghcr.io/gabrielfnakata/bluefin-dx-niri-dms
 ```
